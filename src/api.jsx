@@ -1,7 +1,7 @@
 let ws;
 
 export function startSession(referenceText, onMessage) {
-  ws = new WebSocket("ws://localhost:5000/realtime-assess");
+  ws = new WebSocket("ws://localhost:5050/realtime-assess");
 
   ws.onopen = () => {
     ws.send(JSON.stringify({ type: "start", referenceText }));

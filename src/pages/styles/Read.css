@@ -14,23 +14,23 @@
   text-align: center;
   margin-bottom :0px;  
 }
-#heading{
+/* #heading{
   margin-top: 0px;
   background-color: bisque;
-  width:100vw;
-}
-#paste-note{
+  width:2000vw;
+} */
+/* #paste-note{
   font-size: 20px;
   font-weight:bold;
   color: rgb(105, 104, 104);
   margin-top: 0px;
   position: relative;
   margin-bottom: 15px;
-}
+} */
 .main-body{
   display:flex;
   flex-direction:row;
-  background-color: lightpink;
+  /* background-color: rgb(255, 255, 255); */
   width: 100vw;
   gap: 40px;
   justify-content: center; 

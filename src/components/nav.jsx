@@ -11,7 +11,7 @@ export default function Navbar() {
             </div>
             <div id = "links">
                 <Link to = "/" className="link">Home</Link>
-                <Link to = "/Read" className="link">Read</Link>
+                <Link to = "/readpageSTT" className="link">Read</Link>
                 <Link to = "/Login" className="link whiteButton">Login</Link>
                    <Link to = "/SignUp" className="link whiteButton">Signup</Link>
             </div>

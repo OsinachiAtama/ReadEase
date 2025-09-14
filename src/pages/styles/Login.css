@@ -3,10 +3,10 @@
 .login-container {
   max-width: 400px;
   margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 30px;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: white;
+  height: 300px;
 }
 
 .login-title {
@@ -30,7 +30,7 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 
 .form-input {
@@ -40,6 +40,7 @@
   border-radius: 4px;
   background-color: white;
   transition: border-color 0.2s;
+  color: black;
 }
 
 .form-input:focus {

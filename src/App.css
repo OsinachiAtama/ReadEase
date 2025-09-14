@@ -18,3 +18,17 @@ section {
   text-align: left;
   margin-top: 5%;
 }
+
+.blueButton{
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
+  padding:0 10px;
+  align-items: center;
+  background-color: #155DFC;
+  color: white;
+  width: auto;
+  padding: 10px;
+  min-width: 75px;
+  justify-content:center ;
+}

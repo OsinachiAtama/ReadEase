@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../hooks/useauth";
+import "./styles/SignUp.css"
+import "./styles/Login.css"
 
 export default function SignUp() {
   const { signup } = useAuth();
@@ -18,24 +20,30 @@ export default function SignUp() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Name"
-      />
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-      />
-      <button type="submit">Sign Up</button>
-    </form>
+    <div className="login-container container">
+      <form onSubmit={handleSubmit} className="login-form">
+        <h2 className="login-title">Signup</h2>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Name"
+          className="form-input"
+        />
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
+          className="form-input"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          className="form-input"
+        />
+        <button type="submit" className="submit-button">Sign Up</button>
+      </form>
+    </div>
   );
 }

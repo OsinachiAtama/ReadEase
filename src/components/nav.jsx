@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"; 
 import { IoBookOutline } from 'react-icons/io5';
-import './stlyes/Nav.css';
+import './styles/Nav.css';
 
 export default function Navbar() { 
     return ( 
@@ -12,7 +12,8 @@ export default function Navbar() {
             <div id = "links">
                 <Link to = "/" className="link">Home</Link>
                 <Link to = "/readpageSTT" className="link">Read</Link>
-                <button  className="link  whiteButton" >Login</button>
+                <Link to = "/Login" className="link whiteButton">Login</Link>
+                   <Link to = "/SignUp" className="link whiteButton">Signup</Link>
             </div>
             
         </nav>

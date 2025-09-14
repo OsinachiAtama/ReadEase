@@ -4,10 +4,12 @@ import Home from "./pages/Home";
 import Navbar from "./components/Nav"
 import Read from './pages/readpageSTT'
 
-import './App.css'; 
 
 import SignUp from './pages/Signup'
 import Login from './pages/Login'
+import './App.css'; 
+
+
 import ReadPageSTT from './pages/readpageSTT';
 
 import React from "react";
@@ -23,6 +25,8 @@ function App() {
         <Routes> 
           <Route path="/" element = {<Home/>} />
           <Route path= "/readpageSTT" element = {<Read/>} />
+          <Route path= "/Login" element = {<Login/>} />
+          <Route path= "/SignUp" element = {<SignUp/>} />
         </Routes>
       </Router>
     </>

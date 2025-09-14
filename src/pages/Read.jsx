@@ -1,35 +1,80 @@
-import "./styles/Read.css";
-import { useState } from "react";
-import { RecorderButton } from "../components/Recorderbutton.jsx";
-import { AssessmentPanel } from "../components/Assessment.jsx";
+import {React, useState} from "react"
+import "./styles/Read.css"
+// import { IoUploadOutline } from 'react-icons/io5';
 
-export default function Read() {
-  const [referenceText, setReferenceText] = useState("The quick brown fox jumps over the lazy dog.");
-  const [result, setResult] = useState(null);
+export default function Read(){
+    const [inputText, setInputText] = useState("");   // tracks textarea input
+    const [renderedText, setRenderedText] = useState(""); // tracks what we display
+    const [isEditing, setIsEditing] = useState(true); // toggle edit/view
 
-  return (
-    <div className="container" style={{ maxWidth: 800, margin: "0 auto", padding: 24 }}>
-      <header>
-        <h1 className="headtext" id="heading">Read this aloud</h1>
-        <p className="headtext" id="paste-note">Paste your reading text, then record yourself.</p>
-      </header>
+    const handleStartReading = (e) => {
+        e.preventDefault();
+        setIsEditing(false); // switch to view mode
+    };
 
-      <main className="main-body" style={{ display: "grid", gap: 16 }}>
-        <textarea
-          value={referenceText}
-          onChange={(e) => setReferenceText(e.target.value)}
-          rows={5}
-          style={{ width: "100%", fontSize: 16, padding: 8 }}
-          placeholder="Paste the story here…"
-        />
-    
-        <RecorderButton referenceText={referenceText} onResult={setResult} />
-        {console.log("1"+JSON.stringify(result))}
-        
+    const handleEdit = () => {
+        setIsEditing(true); // switch back to edit mode
+  };
+    return(
+        <>
+            {/* <section> */}
+                <div className="header">
+                    <h1 className="headtext" id="heading">Choose Your Reading Text</h1>
+                    <p className="headtext" id="paste-note">Paste your own text here or try one of our sample stories</p>
+                </div>
+                <div id="main_body"> 
+                    <div className="text_area">
+                        <h4 style={{marginBottom: "0"}}>  
+                            <span className="serif-text">T</span> &nbsp;
+                            Paste Your Text
+                        </h4>
+                        <p style ={{color: "#4A5565", fontSize:"16px", marginTop: "5px"}}>Copy and Paste any text you'd like to read</p>
 
-        <AssessmentPanel result={result} />
-        {console.log("2"+result)}
-      </main>
-    </div>
-  );
+                        {isEditing? (
+                            <form onSubmit={handleStartReading}>
+                            <textarea 
+                                type = "text" 
+                                id = "input-area" 
+                                placeholder="You can paste anything you want...you know"
+                                value = {inputText}
+                                onChange={(e)=> setInputText(e.target.value)}
+                            />
+                            <div id="buttonsDiv"> 
+                                <button type="submit" className="blueButton"> Start Reading </button>
+                                <button type="button" className="blueButton">
+                                    {/* <IoUploadOutline size={24} color="#4A5565"/> */}
+                                    <span>Upload file(soon)</span>
+                                </button>
+                            </div>
+                       
+                        </form>
+
+                        ) : ( 
+                            <div id="render_txt">
+                            <p id="renderedText">{inputText}</p>
+                            <div id="buttonsDiv">
+                                <button onClick={handleEdit} className="blueButton">
+                                Edit
+                                </button>
+                                <button className="blueButton">Read Aloud</button>
+                                <button className="blueButton">Listen First</button>
+                            </div>
+                            </div>
+
+                        )}
+                        
+                    </div>
+                    {/* <div className="text_area" id ="sample-books">
+                        <h4> Have a read aloud session and read too, to Practice!</h4>
+                        <div id="render_txt">
+                            {renderedText}
+                        </div>
+                    </div> */}
+                </div>
+            {/* </section> */}
+        </>
+    )
 }
+
+
+

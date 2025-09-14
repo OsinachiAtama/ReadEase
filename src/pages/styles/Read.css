@@ -1,11 +1,24 @@
 
-.container {
-  min-height: 100vh;
-  display: flex;     
-  flex-direction: column;
-  align-items: center;   
-  justify-content: flex-start;  
-  
+
+section{ 
+  width: 80vw; 
+  border: 2px solid red;
+  justify-content: center;
+  padding: 50px
+}
+#main_body{
+ 
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+.serif-text {
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .headtext {
@@ -16,57 +29,38 @@
 }
 #heading{
   margin-top: 0px;
-  background-color: bisque;
-  width:100vw;
 }
 #paste-note{
-  font-size: 20px;
-  font-weight:bold;
+  font-size: 16px;
+  font-weight: 350;
   color: rgb(105, 104, 104);
   margin-top: 0px;
   position: relative;
-  margin-bottom: 15px;
-}
-.main-body{
-  display:flex;
-  flex-direction:row;
-  background-color: lightpink;
-  width: 100vw;
-  gap: 40px;
-  justify-content: center; 
-  align-items: center;
-
+  margin-bottom: 5px;
 }
 
-@media (max-width: 800px) {
-  .main-body {
-    flex-direction: column;
-  }
-}
-.text-area {
-  display: flex;
+
+
+.text_area {
+  /* display: flex; */
   background-color: white; 
-  border: 2px solid #808eb6; 
-  border-radius: 40px;
-  padding-left: 20px;
-  padding-bottom:20px;
-  padding-top:0px;
-  padding-right: 20px;
-  width: 310px;  
-  min-height: 450px; 
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 300px; 
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2); 
-  max-height: 600px;
-  flex-direction: column;
+  max-height: 700px;
+  /* flex-direction: column; */
   align-items: center;
+  width: 100%;
+  text-align: left;
+  justify-content: left;
+
 }
-#paste-text{
-  background-color: rgb(255, 255, 255);
-  color:#808eb6;
-}
+
 .content{
   display: flex;
   flex-direction: column; 
-  width: 100%;
+  /* width: 100%; */
   padding: 0;
   border-radius: 20px;
   background: none;
@@ -74,8 +68,38 @@
 
 #input-area{
   box-sizing: border-box;
-  width:100%;
-  border: 2px solid #808eb6;
+  /* width:100%; */
+  color: black;
+  background-color: white;
+  padding: 8px; 
+  min-height: 200px;
   border-radius: 8px;
   font-size: 16px;
+  width: 100%
+}
+
+#buttonsDiv { 
+  display: flex;
+  gap: 5px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-self: right;
+}
+
+@media (max-width: 1000px) {
+  #main_body {
+    display: flex;
+    flex-direction: column;
+
+    width: 90vw;
+    justify-content: center;
+
+  }
+  .text_area { 
+    height: 330px;
+    width: 90%;
+    margin: 0 auto;
+    margin: 20px;
+
+  }
 }

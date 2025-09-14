@@ -2,6 +2,7 @@ nav {
     height: 50px;
     justify-content: space-between;
     display: flex;
+  
 }
 #logo_sec { 
     float: left;

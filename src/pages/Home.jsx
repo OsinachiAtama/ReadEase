@@ -1,7 +1,7 @@
 import React from "react";
 import './styles/Home.css';
 import { IoPlayOutline } from 'react-icons/io5';
-import { IoBookOutline, IoVolumeHigh, IoStarOutline, IoPersonOutline} from "react-icons/io5";
+import { IoBookOutline, IoVolumeHigh, IoStarOutline, IoPersonOutline, IoHeartOutline} from "react-icons/io5";
 
 
 export default function Home () { 
@@ -59,17 +59,18 @@ export default function Home () {
             
         </section>
 
-        <section> 
-            <div> 
-                <div> 
-                    <p className="title" style = {{textAlign: "center"}}>Ready to Help Your Child Love Reading? </p>
-                    <div>Join other families who are using ReadEase to make reading a joyful experience for their children</div> 
-                      <button className="blueButton">
-                        <p> Start Reading Now</p>
-                    </button>
-                </div>
-
+        <section id="lastSection"> 
+            <div id="lastSectionDiv"> 
+                <IoHeartOutline size = {50} color = "red" className="home_icon" id= "heart"/>
+                <p className="title" style = {{textAlign: "center"}}>
+                    Ready to Help Your Child Love Reading? 
+                </p>
+                <div id="start_info">Join other families who are using ReadEase to make reading a joyful experience for their children.</div> 
+                    <button className="blueButton" id="start">
+                    <p> Start Reading Now</p>
+                </button>
             </div>
+
         </section>
  
         </>

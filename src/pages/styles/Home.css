@@ -114,7 +114,7 @@
     font-size: 1.15em;
 }
 
-@media( max-width: 600px) { 
+@media( max-width: 800px) { 
     #firstSection { 
         display: flex;
         flex-direction: column;

@@ -5,6 +5,11 @@ import Navbar from "./components/Nav"
 import Read from './pages/Read'
 import './App.css'; 
 
+import SignUp from './pages/Signup'
+import Login from './pages/Login'
+
+import React from "react";
+import SpeechUI from './components/speechui.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
